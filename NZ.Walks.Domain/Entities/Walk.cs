@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +9,16 @@ namespace NZ.Walks.Domain.Entities
 {
     public class Walk
     {
-        private Guid Id { get; set; }
-        private string Name { get; set; }
-        private string Description { get; set; }
-        private double LengthInKm { get; set; }
+        [Key]
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double LengthInKm { get; set; }
         public string? WalkImageUrl { get; set; }
 
         // Foreign keys
-        private Guid DifficultyId { get; set; }
-        private Guid RegionId { get; set; }
+        public Guid DifficultyId { get; set; }
+        public Guid RegionId { get; set; }
 
         // Navigation properties
         public Difficulty Difficulty { get; set; }
