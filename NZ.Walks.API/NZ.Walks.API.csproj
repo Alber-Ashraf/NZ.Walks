@@ -19,4 +19,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NZ.Walks.Infrastructure\NZ.Walks.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
